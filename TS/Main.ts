@@ -1,14 +1,13 @@
 import { arteInfoJogo, clear, stop } from "./Auxiliares/Auxiliares";
+import { yellow } from "./Auxiliares/Cores";
 import { inicio } from "./Caminhos/Caminhos";
 import { criaPersonagem } from "./Personagens/CriaPersonagem";
 
 let personagem = criaPersonagem();
 
-clear()
+clear();
 arteInfoJogo();
 stop();
 
 inicio(personagem);
-
-
 

@@ -25,60 +25,35 @@ export function criaPersonagem(): Personagem {
 
         clear();
 
+        // Arte compactada para caber no terminal sem colocar o cursor pra cima e nao bugar tudo
         yellow(`
-╔══════════════════════════════════════════════════════════╗
-║                  ESCOLHA SUA CLASSE                      ║
-╠══════════════════════════════════════════════════════════╣
-║                                                          ║
-║  1 - BARDO                                               ║
-║      Um personagem equilibrado e versátil.               ║
-║      Dano: 18                                            ║
-║      Defesa: 8                                           ║
-║      Arma: Alaúde Encantado                              ║
-║                                                          ║
-║  2 - BERSERKER                                           ║
-║      Um guerreiro movido pela força e pela fúria.        ║
-║      Dano: 12                                            ║
-║      Defesa: 5                                           ║
-║      Arma: Machado de Guerra                             ║
-║                                                          ║
-║  3 - CAÇADOR                                             ║
-║      Especialista em ataques precisos e letais.          ║
-║      Dano: 25                                            ║
-║      Defesa: 5                                           ║
-║      Arma: Arco Élfico                                   ║
-║                                                          ║
-║  4 - CAVALEIRO                                           ║
-║      Guerreiro protegido por uma poderosa armadura.      ║
-║      Dano: 18                                            ║
-║      Defesa: 18                                          ║
-║      Arma: Espada Longa                                  ║
-║                                                          ║
-║  5 - CLÉRIGO                                             ║
-║      Devoto das forças sagradas e da proteção.           ║
-║      Dano: 10                                            ║
-║      Defesa: 20                                          ║
-║      Arma: Espada Sagrada                                ║
-║                                                          ║
-║  6 - MAGO                                                ║
-║      Poderoso usuário das forças arcanas.                ║
-║      Dano: 25                                            ║
-║      Defesa: 2                                           ║
-║      Arma: Cajado Arcano                                 ║
-║                                                          ║
-║  7 - NECROMANTE                                          ║
-║      Mestre das artes sombrias e dos mortos.             ║
-║      Dano: 20                                            ║
-║      Defesa: 10                                          ║
-║      Arma: Foice das Almas                               ║
-║                                                          ║
-║  8 - PALADINO                                            ║
-║      Guerreiro guiado pela fé e pelo juramento sagrado.  ║
-║      Dano: 15                                            ║
-║      Defesa: 5                                           ║
-║      Arma: Espada Sagrada                                ║ 
-║                                                          ║
-╚══════════════════════════════════════════════════════════╝
+╔══════════════════════════════════════════════════════════════════╗
+║                       ESCOLHA SUA CLASSE                         ║
+╠══════════════════════════════════════════════════════════════════╣
+║ 1 - BARDO - Equilibrado          | HP: 150 | Atq: 18 | Def: 8    ║
+║     Arma: Alaúde Encantado                                       ║
+║                                                                  ║
+║ 2 - BERSERKER - Força e fúria    | HP: 150 | Atq: 12 | Def: 5    ║
+║     Arma: Machado de Guerra                                      ║
+║                                                                  ║
+║ 3 - CAÇADOR - Precisão           | HP: 120 | Atq: 25 | Def: 5    ║
+║     Arma: Arco Élfico                                            ║
+║                                                                  ║
+║ 4 - CAVALEIRO - Armadura         | HP: 100 | Atq: 18 | Def: 18   ║
+║     Arma: Espada Longa                                           ║
+║                                                                  ║
+║ 5 - CLÉRIGO - Proteção sagrada   | HP: 100 | Atq: 10 | Def: 20   ║
+║     Arma: Espada Sagrada                                         ║
+║                                                                  ║
+║ 6 - MAGO - Poder arcano          | HP: 120 | Atq: 25 | Def: 2    ║
+║     Arma: Cajado Arcano                                          ║
+║                                                                  ║
+║ 7 - NECROMANTE - Artes sombrias  | HP: 130 | Atq: 20 | Def: 10   ║
+║     Arma: Foice das Almas                                        ║
+║                                                                  ║
+║ 8 - PALADINO - Fé e juramento    | HP: 100 | Atq: 15 | Def: 5    ║
+║     Arma: Espada Sagrada                                         ║
+╚══════════════════════════════════════════════════════════════════╝
 `);
 
         const opcao = ask.questionInt('Escolha sua classe: ');
