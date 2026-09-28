@@ -139,17 +139,17 @@ Nome escolhido: ${nome}
 
 Deseja confirmar?
 
-S - SIM
-N - DIGITAR NOVAMENTE
+1 - SIM
+2 - DIGITAR NOVAMENTE
 `);
 
-            const confirmarNome = ask.question().toUpperCase();
+            const confirmarNome = Number(ask.question().toUpperCase());
 
-            if (confirmarNome === 'S') {
+            if (confirmarNome === 1) {
                 break; // para de executar autoamticamente o while
             }
 
-            if (confirmarNome !== 'N') {
+            if (confirmarNome !== 2) {
                 red('Opção inválida!');
                 stop();
             }
