@@ -34,3 +34,12 @@
 
 ## Confronto
 - tomarDano e atacar são os métodos principais que todos os inimigos e os personagens tem. Dentro do método atacar de cada um vamos chamar o método tomar dano (Com as devidas validações especiais, como por exemplo, o fantasma tem a opção de se esquivar do dano, inclusive podendo moggar o usar especial do personagem);
+
+## Ideias de mudança no caminho ou ajustes pra melhor adaptação do código na história
+- Aumentar um pouco o valor da quantidade de reputação que tem que ter para abrir o caminho da negociação com os saqueadores
+- Mostrar no final do jogo uma parcial se o jogador é HEROU ou VILAO da história, podemos criar uma variavel do tipo boolean e altera-la conforme cada final. Posso fazer essa ficha depois e adicionar as opções no personagem J
+- Revisar no caminho o encontrarItens, acho que ela não esta adicionando itens no inventário 
+- Na parte 6 do caminho, acho legal a gente colocar a parte de encontrar itens, em vez de abrir novamente a loja do Elfo. Acho legal deixamos apenas 1x a lojinha
+- Revisar a reputação dos personagens, verificar se não estão muito alta ou muito baixa
+- Colocar ganhar ouro sempre no final dos combates
+- SObre a mensagem de reputação e de ganho de ouro eu setei uma mensagem automatica nos métodos. Tiramos para mostrar uma mensagem melhor no terminal pro jogador de acordo com a história que ta acontecendo no momento? (Um problema que notei ao jogar é que fica duas mensagens quando se ganha reputação, uma do método e outra colocado com console.log direto no codigo do caminho)
