@@ -10,6 +10,7 @@ function iniciarConfronto(personagem, inimigo) {
     (0, Auxiliares_1.clear)();
     (0, Auxiliares_1.arteInicioConfronto)();
     (0, Auxiliares_1.infosConfronto)();
+    (0, Auxiliares_1.infoCoresConfronto)();
     inimigo.fichaHabilidade();
     (0, Auxiliares_1.stop)();
     while (!finalConfronto) {

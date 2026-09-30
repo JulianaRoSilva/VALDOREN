@@ -48,8 +48,8 @@ Com uma chance de 40%, esse inimigo poderá se esquivar totalmente do dano do se
     ║                                        ║
     ╚════════════════════════════════════════╝
             `);
-        (0, Auxiliares_1.stop)();
         personagem.tomarDano(danoFinal); // executo o dano no inimigo
+        (0, Auxiliares_1.stop)();
     }
     tomarDano(dano) {
         const chance = Math.random(); // controlar a chance do personagem se esquivar do dano!
@@ -58,8 +58,9 @@ Com uma chance de 40%, esse inimigo poderá se esquivar totalmente do dano do se
         const danoFinal = Math.max(0, dano - defesaAleatoria);
         if (chance < 0.40) {
             (0, Cores_1.red)(`    
+    ESPECIAL INIMIGO
     ╔═══════════════════════════════════════════════╗
-    ║               INTANGIBILIDADE!                ║
+    ║               DEFESA ESPECIAL                 ║
     ╠═══════════════════════════════════════════════╣
     ║ ${String(this.nome).padEnd(45)} 
     ║                                               ║

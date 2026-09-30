@@ -7,8 +7,8 @@ const Cores_1 = require("../Auxiliares/Cores");
 class FadaCorrompida {
     nome = 'Fada Corrompida';
     vida = 60;
-    ataque = 12;
-    defesa = 3;
+    ataque = 20;
+    defesa = 10;
     habilidade = 'Dano em dobro';
     getNome() {
         return this.nome;
@@ -83,10 +83,11 @@ Com uma chance de 60%, esse inimigo podera dar dano duplo.
     ║                                        ║
     ║ ${this.nome} atacou ${personagem.getNome()}!
     ║                                        ║
-    ║ DANO CAUSADO  : ${danoFinal}           ║
+    ║ DANO CAUSADO  : ${danoFinal}           
     ║                                        ║
     ╚════════════════════════════════════════╝
         `);
+            personagem.tomarDano(danoFinal);
             (0, Auxiliares_1.stop)();
         }
     }

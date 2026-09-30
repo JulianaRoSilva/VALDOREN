@@ -15,6 +15,7 @@ exports.lojaMostrarUpArma = lojaMostrarUpArma;
 exports.lojaMostrarPocoes = lojaMostrarPocoes;
 exports.arteCriaPersonagem = arteCriaPersonagem;
 exports.arteInfoJogo = arteInfoJogo;
+exports.infoCoresConfronto = infoCoresConfronto;
 const Cores_1 = require("./Cores");
 exports.ask = require('readline-sync');
 exports.logger = console.log;
@@ -66,7 +67,7 @@ function consoleEspecial() {
         `);
 }
 function arteInicioConfronto() {
-    (0, Cores_1.blue)(`
+    (0, Cores_1.green)(`
 ----------------------------------------------------------------------------------------------------    
  ███   ███  █   █ █████ ████   ███  █   █ █████  ███     ███ █   █ ███  ███  ███  ███  ████   ███    
 █ ░░░ █ ░░█ ██  █░█░░░░░█░░░█ █ ░░█ ██  █░ ░█░░░█ ░░█     █░░██  █░ █░░█ ░░░  █░░█ ░░█ █░░░█ █ ░░█   
@@ -142,7 +143,7 @@ function mostrarInfoCombate(personagem, inimigo) {
 `);
 }
 function infosConfronto() {
-    (0, Cores_1.blue)(`
+    (0, Cores_1.green)(`
 Informacoes do confronto
 
 PERSONAGEM:
@@ -285,4 +286,9 @@ function arteInfoJogo() {
 ║                                                          ║
 ╚══════════════════════════════════════════════════════════╝
 `);
+}
+function infoCoresConfronto() {
+    (0, Cores_1.yellow)(`RODADA DE ATAQUE NO TERMINAL:`);
+    (0, Cores_1.blue)(`AZUL: PERSONAGEM`);
+    (0, Cores_1.red)(`VERMELHO: INIMIGO`);
 }

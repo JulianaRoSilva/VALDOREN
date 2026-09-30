@@ -2,6 +2,9 @@ import { arteInfoJogo, clear, stop } from "./Auxiliares/Auxiliares";
 import { yellow } from "./Auxiliares/Cores";
 import { inicio } from "./Caminhos/Caminhos";
 import { iniciarConfronto } from "./Inimigos/Confronto";
+import { Dragao } from "./Inimigos/Dragao";
+import { Esqueleto } from "./Inimigos/Esqueleto";
+import { FadaCorrompida } from "./Inimigos/FadaCorrompida";
 import { Fantasma } from "./Inimigos/Fantasma";
 import { Saqueador } from "./Inimigos/Saqueador";
 import { Bardo } from "./Personagens/Bardo";
@@ -15,4 +18,4 @@ import { criaPersonagem } from "./Personagens/CriaPersonagem";
 
 // inicio(personagem);
 
-iniciarConfronto(new Bardo('Ju'), new Saqueador())
+iniciarConfronto(new Bardo('Ju'), new Fantasma())

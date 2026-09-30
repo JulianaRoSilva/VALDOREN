@@ -39,7 +39,7 @@ export class Esqueleto implements Inimigo {
     public fichaHabilidade(): void {
         red(`
 O inimigo que voce ira combater tem o seguinte especial:
-Seu método de ataque é roubo de vida. A cada dano causado, sua vida aumenta no mesmo valor.        
+Seu método de ataque é roubo de vida. A cada dano causado, sua vida aumenta no mesmo valor do dano.        
         `)
     }
 
@@ -68,9 +68,8 @@ Seu método de ataque é roubo de vida. A cada dano causado, sua vida aumenta no
         clear();
 
         const rouboAleatorio: number = Math.floor(Math.random() * this.ataque) + 1;
-        const vidaRoubada = personagem.tomarDano(rouboAleatorio); // método de tomar dano retorna o dano efetivo
-        this.vida += vidaRoubada;
-
+        this.vida += rouboAleatorio; // O roubo de vida é direto, não depende do ataque do personagem pro roubo
+        
         red(`
     ATAQUE DO INIMIGO:        
     ╔════════════════════════════════════════╗
@@ -80,12 +79,14 @@ Seu método de ataque é roubo de vida. A cada dano causado, sua vida aumenta no
     ║ ${this.nome}                   
     ║ atacou ${personagem.getNome()}            
     ║                                        ║
-    ║ VIDA ROUBADA : ${String(vidaRoubada).padEnd(23)} 
+    ║ VIDA ROUBADA : ${String(rouboAleatorio).padEnd(23)} 
+    ║ +${rouboAleatorio} DE HP                                      
     ║                                        ║
     ║                                        ║
     ╚════════════════════════════════════════╝
-        `)
-        stop()
+    `);
+            const vidaRoubada = personagem.tomarDano(rouboAleatorio); // método de tomar dano retorna o dano efetivo
+            stop()
     } 
     
     //Mostrar dados do inimigo

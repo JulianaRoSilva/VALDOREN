@@ -1,4 +1,4 @@
-import { clear, escolhasCombate, arteInimigoDerrotado, arteVoceMorreu, stop, mostrarInfoCombate, arteInicioConfronto, infosConfronto } from "../Auxiliares/Auxiliares";
+import { clear, escolhasCombate, arteInimigoDerrotado, arteVoceMorreu, stop, mostrarInfoCombate, arteInicioConfronto, infosConfronto, infoCoresConfronto } from "../Auxiliares/Auxiliares";
 import { red } from "../Auxiliares/Cores";
 import { Inimigo } from "../Interfaces/Inimigo";
 import { Personagem } from "../Personagens/Personagem";
@@ -13,6 +13,7 @@ export function iniciarConfronto(personagem: Personagem, inimigo: Inimigo) {
     clear();
     arteInicioConfronto();
     infosConfronto();
+    infoCoresConfronto();
     inimigo.fichaHabilidade();
     stop();
 
@@ -22,7 +23,7 @@ export function iniciarConfronto(personagem: Personagem, inimigo: Inimigo) {
 
             if (inimigo.getVida() > 0) {
                 clear()
-                mostrarInfoCombate(personagem, inimigo)
+                mostrarInfoCombate(personagem, inimigo);
                 escolhasCombate(personagem);
                 option = Number(ask.question());
 

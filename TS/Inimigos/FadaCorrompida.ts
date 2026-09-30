@@ -8,8 +8,8 @@ import { Personagem } from "../Personagens/Personagem";
 export class FadaCorrompida implements Inimigo {
     private nome: string = 'Fada Corrompida';
     private vida: number = 60;
-    private ataque: number = 12;
-    private defesa: number = 3;
+    private ataque: number = 20;
+    private defesa: number = 10;
     private habilidade: string = 'Dano em dobro'
 
     getNome(): string {
@@ -101,11 +101,12 @@ Com uma chance de 60%, esse inimigo podera dar dano duplo.
     ║                                        ║
     ║ ${this.nome} atacou ${personagem.getNome()}!
     ║                                        ║
-    ║ DANO CAUSADO  : ${danoFinal}           ║
+    ║ DANO CAUSADO  : ${danoFinal}           
     ║                                        ║
     ╚════════════════════════════════════════╝
-        `)
-            stop()
+        `)  
+            personagem.tomarDano(danoFinal);
+            stop();
         }
 
     }

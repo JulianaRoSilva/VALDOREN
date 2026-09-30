@@ -57,8 +57,8 @@ Com uma chance de 40%, esse inimigo poderá se esquivar totalmente do dano do se
     ║                                        ║
     ╚════════════════════════════════════════╝
             `)
-            stop()
         personagem.tomarDano(danoFinal); // executo o dano no inimigo
+        stop()
 
     }
 
@@ -73,8 +73,9 @@ Com uma chance de 40%, esse inimigo poderá se esquivar totalmente do dano do se
 
         if (chance < 0.40) {
             red(`    
+    ESPECIAL INIMIGO
     ╔═══════════════════════════════════════════════╗
-    ║               INTANGIBILIDADE!                ║
+    ║               DEFESA ESPECIAL                 ║
     ╠═══════════════════════════════════════════════╣
     ║ ${String(this.nome).padEnd(45)} 
     ║                                               ║

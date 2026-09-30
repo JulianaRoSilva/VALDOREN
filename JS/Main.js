@@ -1,11 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const Confronto_1 = require("./Inimigos/Confronto");
-const Saqueador_1 = require("./Inimigos/Saqueador");
+const Fantasma_1 = require("./Inimigos/Fantasma");
 const Bardo_1 = require("./Personagens/Bardo");
 // let personagem = criaPersonagem();
 // clear();
 // arteInfoJogo();
 // stop();
 // inicio(personagem);
-(0, Confronto_1.iniciarConfronto)(new Bardo_1.Bardo('Ju'), new Saqueador_1.Saqueador());
+(0, Confronto_1.iniciarConfronto)(new Bardo_1.Bardo('Ju'), new Fantasma_1.Fantasma());

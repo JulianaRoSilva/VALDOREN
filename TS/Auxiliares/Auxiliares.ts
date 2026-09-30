@@ -56,7 +56,7 @@ export function consoleEspecial(): void {
 }
 
 export function arteInicioConfronto(): void {
-    blue(`
+    green(`
 ----------------------------------------------------------------------------------------------------    
  ███   ███  █   █ █████ ████   ███  █   █ █████  ███     ███ █   █ ███  ███  ███  ███  ████   ███    
 █ ░░░ █ ░░█ ██  █░█░░░░░█░░░█ █ ░░█ ██  █░ ░█░░░█ ░░█     █░░██  █░ █░░█ ░░░  █░░█ ░░█ █░░░█ █ ░░█   
@@ -139,7 +139,7 @@ export function mostrarInfoCombate(personagem: Personagem, inimigo: Inimigo): vo
 }
 
 export function infosConfronto(): void {
-    blue(`
+    green(`
 Informacoes do confronto
 
 PERSONAGEM:
@@ -290,6 +290,10 @@ export function arteInfoJogo(): void {
 ╚══════════════════════════════════════════════════════════╝
 `);
 
+}
 
-
+export function infoCoresConfronto(): void {
+    yellow(`RODADA DE ATAQUE NO TERMINAL:`)
+    blue(`AZUL: PERSONAGEM`)
+    red(`VERMELHO: INIMIGO`)
 }
