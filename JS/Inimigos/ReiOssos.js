@@ -10,8 +10,8 @@ Fiz um atributo especial para esse inimigo
 class ReiOssos {
     nome = 'Rei dos Ossos';
     vida = 100;
-    ataque = 40;
-    defesa = 15;
+    ataque = 30;
+    defesa = 10;
     habilidade = 'Conversão vida em Ataque';
     ressurgir = false;
     getNome() {

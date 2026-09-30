@@ -2,6 +2,7 @@ import { clear, escolhasCombate, arteInimigoDerrotado, arteVoceMorreu, stop, mos
 import { red } from "../Auxiliares/Cores";
 import { Inimigo } from "../Interfaces/Inimigo";
 import { Personagem } from "../Personagens/Personagem";
+import { ReiOssos } from "./ReiOssos";
 
 const ask = require('readline-sync');
 
@@ -35,12 +36,24 @@ export function iniciarConfronto(personagem: Personagem, inimigo: Inimigo) {
                         personagem.atacar(inimigo);
                         stop();
 
+                        // if especifico de ataque do rei ossos, porque ele pode ter vida zero e ressurgir novamente
+                        if (inimigo instanceof ReiOssos) {
+                            
+                            if(!inimigo.getRessurgir()){
+
+                                clear();
+                                inimigo.atacar(personagem);
+                                break; //parar o codigo caso o rei ossos atacar 1x já
+                            }
+                            
+                        }
+
                         // If para que caso o inimigo morrer com o meu ataque, ele nao me contra atacar
                         if (inimigo.getVida() > 0) {
                             
                             clear();
                             inimigo.atacar(personagem);
-                            // stop();
+                            
                         }
 
                         break;

@@ -12,8 +12,8 @@ Fiz um atributo especial para esse inimigo
 export class ReiOssos implements Inimigo {
     private nome: string = 'Rei dos Ossos';
     private vida: number = 100;
-    private ataque: number = 40;
-    private defesa: number = 15;
+    private ataque: number = 30;
+    private defesa: number = 10;
     private habilidade: string = 'Conversão vida em Ataque'
     private ressurgir: boolean = false;
 
@@ -77,6 +77,7 @@ Após ele ser derrotado, irá ressurgir novamente para um novo combate.
 
     //Método de ataque. 
     public atacar(personagem: Personagem): void {
+
         let danoFinal: number;
         
         //Condição de ressurgir novamente

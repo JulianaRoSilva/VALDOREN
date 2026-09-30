@@ -6,6 +6,7 @@ import { Dragao } from "./Inimigos/Dragao";
 import { Esqueleto } from "./Inimigos/Esqueleto";
 import { FadaCorrompida } from "./Inimigos/FadaCorrompida";
 import { Fantasma } from "./Inimigos/Fantasma";
+import { ReiOssos } from "./Inimigos/ReiOssos";
 import { Saqueador } from "./Inimigos/Saqueador";
 import { Bardo } from "./Personagens/Bardo";
 import { criaPersonagem } from "./Personagens/CriaPersonagem";
@@ -18,4 +19,4 @@ import { criaPersonagem } from "./Personagens/CriaPersonagem";
 
 // inicio(personagem);
 
-iniciarConfronto(new Bardo('Ju'), new Fantasma())
+iniciarConfronto(new Bardo('Ju'), new ReiOssos())

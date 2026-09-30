@@ -9,7 +9,7 @@ const Arma_1 = require("../Inventario/Arma");
 const Personagem_1 = require("./Personagem");
 class Bardo extends Personagem_1.Personagem {
     constructor(nome) {
-        super(nome, 'Bardo', 150, 18, 8, 100, 40);
+        super(nome, 'Bardo', 300, 18, 8, 100, 40);
         this.inventario.push(new Arma_1.Arma('Alaude encantado', 10));
     }
     usarAtaqueEspecial(inimigo) {
