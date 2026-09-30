@@ -31,7 +31,7 @@ function iniciarConfronto(personagem, inimigo) {
                             if (!inimigo.getRessurgir()) {
                                 (0, Auxiliares_1.clear)();
                                 inimigo.atacar(personagem);
-                                break; //parar o codigo caso o rei ossos atacar 1x já
+                                break; //parar while codigo caso o rei ossos atacar 1x já
                             }
                         }
                         // If para que caso o inimigo morrer com o meu ataque, ele nao me contra atacar
