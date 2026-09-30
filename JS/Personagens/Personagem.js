@@ -104,13 +104,13 @@ class Personagem {
         // o max me retorna o maior valor entre os dois, se o dano por acaso ficar negativo, o dano será zerado
         const danoFinal = Math.max(0, dano - defesaAleatoria);
         this.vida -= danoFinal;
-        (0, Cores_1.blue)(`
-    -- ----------------------------------------- --
-        ${this.nome.toUpperCase()} TOMOU DANO!
-        Dano recebido: ${dano}
-        Defesa: ${defesaAleatoria}
-        Dano efetivo recebido: ${danoFinal}
-    -- ----------------------------------------- --        
+        (0, Cores_1.red)(`
+-- ----------------------------------------- --
+    ${this.nome.toUpperCase()} TOMOU DANO!
+    Dano recebido: ${dano}
+    Defesa: ${defesaAleatoria}
+    Dano efetivo recebido: ${danoFinal}
+-- ----------------------------------------- --        
             `);
         if (this.vida < 0) {
             this.vida = 0;
@@ -118,7 +118,15 @@ class Personagem {
         return danoFinal;
     }
     atacar(inimigo) {
-        (0, Cores_1.blue)(`ATAQUE DE ${this.nome.toUpperCase()}`);
+        (0, Cores_1.blue)(`
+    ╔═══════════════════════════════════╗
+    ║              ATAQUE               ║
+    ╠═══════════════════════════════════╣
+    ║                                   ║
+    ║  ATAQUE DE ${this.nome.toUpperCase()}
+    ║  VALOR DO ATAQUE: ${this.ataque}
+    ║                                   ║
+    ╚═══════════════════════════════════╝`);
         inimigo.tomarDano(this.ataque);
     }
     // -- -------------------------------------- --
@@ -129,12 +137,6 @@ class Personagem {
     }
     adicionaInventario(item) {
         this.inventario.push(item);
-    }
-    removeIteminventario(item) {
-        const position = this.inventario.indexOf(item);
-        if (position > -1) {
-            this.inventario.splice(position, 1);
-        }
     }
     tomarPocao(pocao) {
         if (pocao.getEfeito() === TiposENUMs_1.EfeitoPocao.CURA) { // CURA = 0

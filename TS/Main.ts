@@ -1,13 +1,18 @@
 import { arteInfoJogo, clear, stop } from "./Auxiliares/Auxiliares";
 import { yellow } from "./Auxiliares/Cores";
 import { inicio } from "./Caminhos/Caminhos";
+import { iniciarConfronto } from "./Inimigos/Confronto";
+import { Fantasma } from "./Inimigos/Fantasma";
+import { Saqueador } from "./Inimigos/Saqueador";
+import { Bardo } from "./Personagens/Bardo";
 import { criaPersonagem } from "./Personagens/CriaPersonagem";
 
-let personagem = criaPersonagem();
+// let personagem = criaPersonagem();
 
-clear();
-arteInfoJogo();
-stop();
+// clear();
+// arteInfoJogo();
+// stop();
 
-inicio(personagem);
+// inicio(personagem);
 
+iniciarConfronto(new Bardo('Ju'), new Saqueador())

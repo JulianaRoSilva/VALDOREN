@@ -95,7 +95,7 @@ export abstract class Personagem {
     }
 
     public pagarOuro(val: number): boolean {
-        if(val > this.ouro) {
+        if (val > this.ouro) {
             return false
         }
         this.ouro -= val
@@ -127,7 +127,7 @@ export abstract class Personagem {
     // método que será implementado em cada classe de uma maneira
     abstract usarAtaqueEspecial(inimigo: Inimigo): number;
 
-    
+
     // Métodos de combate
     public tomarDano(dano: number): number {
 
@@ -137,13 +137,13 @@ export abstract class Personagem {
         const danoFinal = Math.max(0, dano - defesaAleatoria);
         this.vida -= danoFinal;
 
-        blue(`
-    -- ----------------------------------------- --
-        ${this.nome.toUpperCase()} TOMOU DANO!
-        Dano recebido: ${dano}
-        Defesa: ${defesaAleatoria}
-        Dano efetivo recebido: ${danoFinal}
-    -- ----------------------------------------- --        
+        red(`
+-- ----------------------------------------- --
+    ${this.nome.toUpperCase()} TOMOU DANO!
+    Dano recebido: ${dano}
+    Defesa: ${defesaAleatoria}
+    Dano efetivo recebido: ${danoFinal}
+-- ----------------------------------------- --        
             `)
 
         if (this.vida < 0) {
@@ -154,7 +154,15 @@ export abstract class Personagem {
 
 
     public atacar(inimigo: Inimigo): void {
-        blue(`ATAQUE DE ${this.nome.toUpperCase()}`)
+        blue(`
+    ╔═══════════════════════════════════╗
+    ║              ATAQUE               ║
+    ╠═══════════════════════════════════╣
+    ║                                   ║
+    ║  ATAQUE DE ${this.nome.toUpperCase()}
+    ║  VALOR DO ATAQUE: ${this.ataque}
+    ║                                   ║
+    ╚═══════════════════════════════════╝`)
         inimigo.tomarDano(this.ataque)
     }
 
@@ -168,16 +176,6 @@ export abstract class Personagem {
 
     public adicionaInventario(item: Item): void {
         this.inventario.push(item)
-    }
-
-
-    public removeIteminventario(item: Item): void {
-
-        const position = this.inventario.indexOf(item);
-
-        if (position > -1) {
-            this.inventario.splice(position, 1);
-        }
     }
 
     public tomarPocao(pocao: Pocao): void {

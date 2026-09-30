@@ -58,35 +58,35 @@ Com uma chance de 60%, esse inimigo podera dar dano duplo.
         if (chance < 0.60) { // 60% de chance de ter ataque duplo
             danoFinal = danoAleatorio * 2;
             (0, Cores_1.red)(`
-        ATAQUE DO INIMIGO:
-        ╔════════════════════════════════════════╗
-        ║          HABILIDADE ESPECIAL           ║
-        ╠════════════════════════════════════════╣
-        ║                                        ║
-        ║ ${this.nome} ativou ATAQUE DUPLO!      
-        ║                                        ║
-        ║ DANO CAUSADO  : ${danoFinal}           
-        ║                                        ║
-        ║                                        ║
-        ╚════════════════════════════════════════╝
-        `);
+    ATAQUE DO INIMIGO:
+    ╔════════════════════════════════════════╗
+    ║          HABILIDADE ESPECIAL           ║
+    ╠════════════════════════════════════════╣
+    ║                                        ║
+    ║ ${this.nome} ativou ATAQUE DUPLO!      
+    ║                                        ║
+    ║ DANO CAUSADO  : ${danoFinal}           
+    ║                                        ║
+    ║                                        ║
+    ╚════════════════════════════════════════╝
+    `);
             personagem.tomarDano(danoFinal);
             (0, Auxiliares_1.stop)();
         }
         else {
             danoFinal = danoAleatorio;
             (0, Cores_1.red)(`
-        ATAQUE DO INIMIGO:
-        ╔════════════════════════════════════════╗
-        ║                 ATAQUE                 ║
-        ╠════════════════════════════════════════╣
-        ║                                        ║
-        ║ ${this.nome} atacou ${personagem.getNome()}!
-        ║                                        ║
-        ║ DANO CAUSADO  : ${danoFinal}           ║
-        ║                                        ║
-        ╚════════════════════════════════════════╝
-            `);
+    ATAQUE DO INIMIGO:
+    ╔════════════════════════════════════════╗
+    ║                 ATAQUE                 ║
+    ╠════════════════════════════════════════╣
+    ║                                        ║
+    ║ ${this.nome} atacou ${personagem.getNome()}!
+    ║                                        ║
+    ║ DANO CAUSADO  : ${danoFinal}           ║
+    ║                                        ║
+    ╚════════════════════════════════════════╝
+        `);
             (0, Auxiliares_1.stop)();
         }
     }
@@ -94,17 +94,17 @@ Com uma chance de 60%, esse inimigo podera dar dano duplo.
     usarHabilidade(personagem) {
         const dano = personagem.tomarDano(this.ataque * 2);
         (0, Cores_1.red)(`
-        ╔════════════════════════════════════════╗
-        ║          HABILIDADE ESPECIAL           ║
-        ╠════════════════════════════════════════╣
-        ║                                        ║
-        ║ ${this.nome} ativou ATAQUE DUPLO!      
-        ║                                        ║
-        ║ DANO CAUSADO  : ${dano}                
-        ║ VIDA RESTANTE : ${personagem.getVida()}
-        ║                                        ║
-        ╚════════════════════════════════════════╝
-        `);
+    ╔════════════════════════════════════════╗
+    ║          HABILIDADE ESPECIAL           ║
+    ╠════════════════════════════════════════╣
+    ║                                        ║
+    ║ ${this.nome} ativou ATAQUE DUPLO!      
+    ║                                        ║
+    ║ DANO CAUSADO  : ${dano}                
+    ║ VIDA RESTANTE : ${personagem.getVida()}
+    ║                                        ║
+    ╚════════════════════════════════════════╝
+    `);
     }
     //Mostrar dados do inimigo
     fichaInimigo() {

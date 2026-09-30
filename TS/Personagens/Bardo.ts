@@ -21,8 +21,8 @@ export class Bardo extends Personagem {
         if (!this.usouAtaqueEspecial) {
             
             consoleEspecial();
-            inimigo.tomarDano(danoFinal)
             blue(`Que a minha melodia desperte o poder que repousa em minha alma! ATAQUE AUMENTADO EM 200!`);
+            inimigo.tomarDano(danoFinal)
             this.setEspecial() // Seta o especial = true
             return danoFinal;
 

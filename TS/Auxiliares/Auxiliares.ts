@@ -1,6 +1,6 @@
 import { Inimigo } from "../Interfaces/Inimigo";
 import { Personagem } from "../Personagens/Personagem";
-import { blue, green, orange, purple, red, yellow } from "./Cores";
+import { blue, green, orange, purple, red, white, yellow } from "./Cores";
 
 export const ask = require('readline-sync');
 
@@ -15,6 +15,31 @@ export function stop(): void {
 export function clear(): void {
     console.clear();
 }
+
+export const consoleSaindo = (): void => {
+    clear();  
+    white(`
+-------------------------------------------------------------------------------------- 
+            ████  ███  ███ █   █ ████   ███    
+            █ ░░░░█ ░░█  █░░██  █░█░░░█ █ ░░█   
+             ███░░█████░ █░░█░█ █░█░░░█░█░ ░█░  
+              ░░█ █░░░█░░█░░█░░██░█░░ █░█░░ █░░ 
+            ████░░█░░░█░███░█░░ █░████ ░░███ ░░ 
+             ░░░░ ░░░  ░░░░░ ░░  ░░░░░░ ░ ░░░ ░ 
+              ░░░░  ░   ░ ░░░ ░   ░ ░░░░   ░░░ ...
+-------------------------------------------------------------------------------------- 
+    `);
+}
+export const tituloJogo = (): void => {
+    clear();
+    white(`
+    ╔══════════════════════════════════════╗
+    ║        O MISTÉRIO DE VALDOREN        ║
+    ╚══════════════════════════════════════╝
+    `);
+    white('Antes de sua jornada começar, escolha quem você será nessa história.');
+    stop();
+};
 
 export function consoleEspecial(): void {
     purple(`

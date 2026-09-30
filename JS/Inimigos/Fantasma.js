@@ -48,6 +48,7 @@ Com uma chance de 40%, esse inimigo poderá se esquivar totalmente do dano do se
     ║                                        ║
     ╚════════════════════════════════════════╝
             `);
+        (0, Auxiliares_1.stop)();
         personagem.tomarDano(danoFinal); // executo o dano no inimigo
     }
     tomarDano(dano) {
@@ -69,7 +70,6 @@ Com uma chance de 40%, esse inimigo poderá se esquivar totalmente do dano do se
     ║                                               ║
     ╚═══════════════════════════════════════════════╝
         `);
-            (0, Auxiliares_1.stop)();
         }
         else {
             this.vida -= danoFinal;
@@ -81,7 +81,6 @@ Com uma chance de 40%, esse inimigo poderá se esquivar totalmente do dano do se
     Dano efetivo recebido: ${danoFinal}
 -- ----------------------------------------- -- 
         `);
-            (0, Auxiliares_1.stop)();
         }
         if (this.vida < 0) {
             this.vida = 0;

@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.logger = exports.ask = void 0;
+exports.tituloJogo = exports.consoleSaindo = exports.logger = exports.ask = void 0;
 exports.stop = stop;
 exports.clear = clear;
 exports.consoleEspecial = consoleEspecial;
@@ -26,6 +26,32 @@ function stop() {
 function clear() {
     console.clear();
 }
+const consoleSaindo = () => {
+    clear();
+    (0, Cores_1.white)(`
+-------------------------------------------------------------------------------------- 
+            ████  ███  ███ █   █ ████   ███    
+            █ ░░░░█ ░░█  █░░██  █░█░░░█ █ ░░█   
+             ███░░█████░ █░░█░█ █░█░░░█░█░ ░█░  
+              ░░█ █░░░█░░█░░█░░██░█░░ █░█░░ █░░ 
+            ████░░█░░░█░███░█░░ █░████ ░░███ ░░ 
+             ░░░░ ░░░  ░░░░░ ░░  ░░░░░░ ░ ░░░ ░ 
+              ░░░░  ░   ░ ░░░ ░   ░ ░░░░   ░░░ ...
+-------------------------------------------------------------------------------------- 
+    `);
+};
+exports.consoleSaindo = consoleSaindo;
+const tituloJogo = () => {
+    clear();
+    (0, Cores_1.white)(`
+    ╔══════════════════════════════════════╗
+    ║        O MISTÉRIO DE VALDOREN        ║
+    ╚══════════════════════════════════════╝
+    `);
+    (0, Cores_1.white)('Antes de sua jornada começar, escolha quem você será nessa história.');
+    stop();
+};
+exports.tituloJogo = tituloJogo;
 function consoleEspecial() {
     (0, Cores_1.purple)(`
 --------------------------------------------------------------------------------------        

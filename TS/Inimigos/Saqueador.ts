@@ -1,11 +1,12 @@
 //Chance de roubar ouro do personagem em vez de atacar
+import { stop } from "../Auxiliares/Auxiliares";
 import { blue, red, yellow } from "../Auxiliares/Cores";
 import { Inimigo } from "../Interfaces/Inimigo";
 import { Personagem } from "../Personagens/Personagem";
 
 export class Saqueador implements Inimigo {
     private nome: string = 'Saqueador do Cemiterio';
-    private vida: number = 35;
+    private vida: number = 55;
     private ataque: number = 10;
     private defesa: number = 2;
     private habilidade: string = 'Roubo Rapido';
@@ -33,7 +34,7 @@ export class Saqueador implements Inimigo {
     public fichaHabilidade(): void {
         red(`
 O inimigo que voce ira combater tem o seguinte especial:
-Com uma chance de 35%, esse inimigo pode roubar parte do seu ouro
+Com uma chance de 10%, esse inimigo pode roubar parte do seu ouro
 em vez de atacar normalmente.        
         `);
     }
@@ -52,7 +53,7 @@ em vez de atacar normalmente.
     Dano efetivo recebido: ${danoFinal}
 -- ----------------------------------------- --    
         `)
-        stop()
+        
 
         if (this.vida < 0) {
             this.vida = 0;
@@ -66,26 +67,26 @@ em vez de atacar normalmente.
 
         const chance: number = Math.random();
 
-        if (chance < 0.35) { // 35% de chance de roubar ouro em vez de atacar
+        if (chance < 0.10) { // 10% de chance de roubar ouro em vez de atacar
             this.usarHabilidade(personagem);
+            stop();
             return;
         }
 
         const danoFinal: number = Math.floor(Math.random() * this.ataque) + 1;
-        yellow(`
-        ATAQUE DO INIMIGO:
-        ╔════════════════════════════════════════╗
-        ║                 ATAQUE                 ║
-        ╠════════════════════════════════════════╣
-        ║                                        ║
-        ║ ${this.nome} atacou ${personagem.getNome()}!
-        ║                                        ║
-        ║ DANO CAUSADO  : ${danoFinal}           ║
-        ║                                        ║
-        ╚════════════════════════════════════════╝
-            `)
+        red(`
+    ATAQUE DO INIMIGO:
+    ╔═════════════════════════════════════════════╗
+    ║                    ATAQUE                   ║
+    ╠═════════════════════════════════════════════╣
+    ║                                             ║
+    ║ ${this.nome} atacou ${personagem.getNome()}!
+    ║                                             ║
+    ║ DANO CAUSADO  : ${danoFinal}                
+    ║                                             ║
+    ╚═════════════════════════════════════════════╝`)
         personagem.tomarDano(danoFinal);
-        stop()
+        stop();
     }
 
     //Método de habilidade do inimigo
@@ -98,17 +99,20 @@ em vez de atacar normalmente.
         personagem.setOuro(-valorRealRoubado);
 
         red(`
-        ╔════════════════════════════════════════╗
-        ║          HABILIDADE ESPECIAL           ║
-        ╠════════════════════════════════════════╣
-        ║                                        ║
-        ║ ${this.nome} ativou ROUBO RAPIDO!      
-        ║                                        ║
-        ║ OURO ROUBADO  : ${valorRealRoubado}                
-        ║ OURO RESTANTE : ${personagem.getOuro()}
-        ║                                        ║
-        ╚════════════════════════════════════════╝
+    ╔═════════════════════════════════════════════╗
+    ║             HABILIDADE ESPECIAL             ║
+    ╠═════════════════════════════════════════════╣
+    ║                                             ║
+    ║ ${this.nome} ativou ROUBO RAPIDO!      
+    ║                                             ║
+    ║ OURO ROUBADO  : ${valorRealRoubado}                
+    ║ OURO RESTANTE : ${personagem.getOuro()}
+    ║                                             ║
+    ║ NENHUM ATAQUE REALIZADO                     ║
+    ║                                             ║
+    ╚═════════════════════════════════════════════╝
         `);
+        
     }
 
     //Mostrar dados do inimigo
