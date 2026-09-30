@@ -115,6 +115,7 @@ function loja(personagem) {
                                         item.setNivel();
                                         personagem.setOuro(-100);
                                         personagem.setAtaque(5);
+                                        (0, Auxiliares_1.clear)();
                                         (0, Cores_1.blue)(`Sua arma '${item.getNome()}' foi upada para o nível ${item.getNivel()}`);
                                         (0, Cores_1.blue)(`Ataque aumentado em +5`);
                                         (0, Auxiliares_1.stop)();

@@ -167,6 +167,7 @@ export function loja(personagem: Personagem): void {
                                         personagem.setOuro(-100);
                                         personagem.setAtaque(5);
 
+                                        clear();
                                         blue(`Sua arma '${item.getNome()}' foi upada para o nível ${item.getNivel()}`);
                                         blue(`Ataque aumentado em +5`)
                                         stop();
@@ -286,7 +287,7 @@ export function loja(personagem: Personagem): void {
                             if (personagem.getOuro() >= 45) {
 
                                 personagem.adicionaInventario(
-                                    new Pocao('Poção de Força Maior',15,EfeitoPocao.FORCA)
+                                    new Pocao('Poção de Força Maior', 15, EfeitoPocao.FORCA)
                                 );
 
                                 personagem.setOuro(-45);

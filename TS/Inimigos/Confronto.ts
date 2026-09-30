@@ -1,5 +1,5 @@
 import { clear, escolhasCombate, arteInimigoDerrotado, arteVoceMorreu, stop, mostrarInfoCombate, arteInicioConfronto, infosConfronto, infoCoresConfronto } from "../Auxiliares/Auxiliares";
-import { red } from "../Auxiliares/Cores";
+import { red, yellow } from "../Auxiliares/Cores";
 import { Inimigo } from "../Interfaces/Inimigo";
 import { Personagem } from "../Personagens/Personagem";
 import { ReiOssos } from "./ReiOssos";
@@ -38,22 +38,21 @@ export function iniciarConfronto(personagem: Personagem, inimigo: Inimigo) {
 
                         // if especifico de ataque do rei ossos, porque ele pode ter vida zero e ressurgir novamente
                         if (inimigo instanceof ReiOssos) {
-                            
-                            if(!inimigo.getRessurgir()){
 
+                            if (!inimigo.getRessurgir()) {
                                 clear();
                                 inimigo.atacar(personagem);
                                 break; //parar while codigo caso o rei ossos atacar 1x já
                             }
-                            
+
                         }
 
                         // If para que caso o inimigo morrer com o meu ataque, ele nao me contra atacar
                         if (inimigo.getVida() > 0) {
-                            
+
                             clear();
                             inimigo.atacar(personagem);
-                            
+
                         }
 
                         break;
@@ -68,7 +67,7 @@ export function iniciarConfronto(personagem: Personagem, inimigo: Inimigo) {
                             case 1:
                                 clear()
                                 const pocao = personagem.escolherPocao();
-                                
+
                                 if (pocao !== null) {
                                     clear()
                                     personagem.tomarPocao(pocao);
@@ -78,7 +77,7 @@ export function iniciarConfronto(personagem: Personagem, inimigo: Inimigo) {
 
                             case 2:
                                 //Apenas faz voltar para o menu
-                                break;    
+                                break;
 
                             default:
                                 clear()
@@ -105,7 +104,9 @@ export function iniciarConfronto(personagem: Personagem, inimigo: Inimigo) {
 
                 clear();
                 arteInimigoDerrotado();      // Arte de inimigo derrotado
-                personagem.setReputacao(10); // ao vencer confronto, ganha reputação 
+                personagem.setReputacao(10); // ao vencer confronto, ganha reputação
+                personagem.setOuro(20);      // ao vencer confronto, ganha ouro
+                yellow(`+20 OURO PELA VITÓRIA DO COMBATE`);
                 finalConfronto = true;
                 stop();
 

@@ -11,12 +11,12 @@ import { Saqueador } from "./Inimigos/Saqueador";
 import { Bardo } from "./Personagens/Bardo";
 import { criaPersonagem } from "./Personagens/CriaPersonagem";
 
-// let personagem = criaPersonagem();
+let personagem = criaPersonagem();
 
-// clear();
-// arteInfoJogo();
-// stop();
+clear();
+arteInfoJogo();
+stop();
 
-// inicio(personagem);
+inicio(personagem);
 
-iniciarConfronto(new Bardo('Ju'), new ReiOssos())
+// iniciarConfronto(new Bardo('Ju'), new ReiOssos())

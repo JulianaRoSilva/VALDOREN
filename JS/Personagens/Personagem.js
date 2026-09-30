@@ -218,7 +218,7 @@ Opcoes:
         }
         else {
             (0, Cores_1.green)(`
-1̶ ̶-̶ ̶U̶s̶a̶r̶ ̶p̶o̶c̶a̶o̶ (Voce não possui pocoes a serem utilizadas)
+1̶ ̶-̶ ̶U̶s̶a̶r̶ ̶p̶o̶c̶a̶o̶ (Voce não possuí poções a serem utilizadas)
 2 - Fechar inventário`);
         }
     }

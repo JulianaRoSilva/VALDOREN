@@ -17,8 +17,6 @@ Alterei o CASE 1 da PARTE 2, PARTE4ESCADALATERAL
 CAMINHO2PARTE5 coloquei confronto com o BOSS
 */
 let encontrouReiOssos = false;
-//Não acho necessário esse controle
-//let controle: boolean = false
 //INICIO GAME
 const inicio = (personagem) => {
     (0, Auxiliares_1.clear)();
@@ -990,8 +988,3 @@ const parte6 = (personagem, inimigo, romperSelo, jaEncontrouReiOssos) => {
     process.exit();
 };
 exports.parte6 = parte6;
-/* Ideias da história
-*
-*
-*
-*/ 
