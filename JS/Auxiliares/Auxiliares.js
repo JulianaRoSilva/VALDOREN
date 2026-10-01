@@ -241,7 +241,7 @@ function arteCriaPersonagem() {
 function arteInfoJogo() {
     (0, Cores_1.yellow)(`
 ╔══════════════════════════════════════════════════════════╗
-║                    COMO FUNCIONA O JOGO                  ║
+║                  COMO FUNCIONA O JOGO                    ║
 ╠══════════════════════════════════════════════════════════╣
 ║                                                          ║
 ║  VALDOREN é uma aventura baseada em escolhas.            ║

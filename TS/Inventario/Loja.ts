@@ -54,6 +54,7 @@ export function loja(personagem: Personagem): void {
 
                             if (personagem.possuiItem('Armadura de Couro')) {
 
+                                clear()
                                 red(`Você já possui a Armadura de Couro!`);
                                 stop();
 
@@ -84,6 +85,7 @@ export function loja(personagem: Personagem): void {
 
                             if (personagem.possuiItem('Cota de Malha')) {
 
+                                clear()
                                 red(`Você já possui a Cota de Malha!`);
                                 stop();
 
@@ -114,6 +116,7 @@ export function loja(personagem: Personagem): void {
 
                             if (personagem.possuiItem('Armadura de Aço')) {
 
+                                clear()
                                 red(`Você já possui a Armadura de Aço!`);
                                 stop();
 
@@ -133,6 +136,7 @@ export function loja(personagem: Personagem): void {
 
                             } else {
 
+                                clear()
                                 red(`Sem dinheiro suficiente para comprar essa armadura!`);
                                 stop();
                             }
@@ -144,6 +148,7 @@ export function loja(personagem: Personagem): void {
                             break;
 
                         default:
+                            clear()
                             red(`Opção inválida!`);
                             stop();
                     }
@@ -153,6 +158,7 @@ export function loja(personagem: Personagem): void {
                 case 2: // Melhorar arma
 
                     clear();
+                    yellow(`SEU OURO: ${personagem.getOuro()}`);
                     lojaMostrarUpArma();
                     option = Number(ask.question());
 
@@ -175,6 +181,7 @@ export function loja(personagem: Personagem): void {
                                     }
                                 }
                             } else {
+                                clear()
                                 red(`Voce não tem Ouro suficiente para aumentar o nível da sua arma!`);
                                 stop();
                             }
@@ -197,6 +204,7 @@ export function loja(personagem: Personagem): void {
                 case 3: // Poções
 
                     clear();
+                    yellow(`SEU OURO: ${personagem.getOuro()}`);
                     lojaMostrarPocoes();
                     option = Number(ask.question());
 
@@ -222,6 +230,7 @@ export function loja(personagem: Personagem): void {
 
                             } else {
 
+                                clear()
                                 red(`Sem dinheiro suficiente para comprar essa poção!`);
                                 stop();
                             }
@@ -249,6 +258,7 @@ export function loja(personagem: Personagem): void {
 
                             } else {
 
+                                clear()
                                 red(`Sem dinheiro suficiente para comprar essa poção!`);
                                 stop();
                             }
@@ -275,7 +285,7 @@ export function loja(personagem: Personagem): void {
                                 stop();
 
                             } else {
-
+                                clear()
                                 red(`Sem dinheiro suficiente para comprar essa poção!`);
                                 stop();
                             }
@@ -298,7 +308,7 @@ export function loja(personagem: Personagem): void {
                                 stop();
 
                             } else {
-
+                                clear()
                                 red(`Sem dinheiro suficiente para comprar essa poção!`);
                                 stop();
                             }

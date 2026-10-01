@@ -39,6 +39,7 @@ function loja(personagem) {
                     switch (option) {
                         case 1:
                             if (personagem.possuiItem('Armadura de Couro')) {
+                                (0, Auxiliares_1.clear)();
                                 (0, Cores_1.red)(`Você já possui a Armadura de Couro!`);
                                 (0, Auxiliares_1.stop)();
                             }
@@ -59,6 +60,7 @@ function loja(personagem) {
                             break;
                         case 2:
                             if (personagem.possuiItem('Cota de Malha')) {
+                                (0, Auxiliares_1.clear)();
                                 (0, Cores_1.red)(`Você já possui a Cota de Malha!`);
                                 (0, Auxiliares_1.stop)();
                             }
@@ -79,6 +81,7 @@ function loja(personagem) {
                             break;
                         case 3:
                             if (personagem.possuiItem('Armadura de Aço')) {
+                                (0, Auxiliares_1.clear)();
                                 (0, Cores_1.red)(`Você já possui a Armadura de Aço!`);
                                 (0, Auxiliares_1.stop)();
                             }
@@ -92,6 +95,7 @@ function loja(personagem) {
                                 (0, Auxiliares_1.stop)();
                             }
                             else {
+                                (0, Auxiliares_1.clear)();
                                 (0, Cores_1.red)(`Sem dinheiro suficiente para comprar essa armadura!`);
                                 (0, Auxiliares_1.stop)();
                             }
@@ -99,12 +103,14 @@ function loja(personagem) {
                         case 4: // Voltar pro Menu. não faz nada
                             break;
                         default:
+                            (0, Auxiliares_1.clear)();
                             (0, Cores_1.red)(`Opção inválida!`);
                             (0, Auxiliares_1.stop)();
                     }
                     break;
                 case 2: // Melhorar arma
                     (0, Auxiliares_1.clear)();
+                    (0, Cores_1.yellow)(`SEU OURO: ${personagem.getOuro()}`);
                     (0, Auxiliares_1.lojaMostrarUpArma)();
                     option = Number(ask.question());
                     switch (option) {
@@ -124,6 +130,7 @@ function loja(personagem) {
                                 }
                             }
                             else {
+                                (0, Auxiliares_1.clear)();
                                 (0, Cores_1.red)(`Voce não tem Ouro suficiente para aumentar o nível da sua arma!`);
                                 (0, Auxiliares_1.stop)();
                             }
@@ -140,6 +147,7 @@ function loja(personagem) {
                     break;
                 case 3: // Poções
                     (0, Auxiliares_1.clear)();
+                    (0, Cores_1.yellow)(`SEU OURO: ${personagem.getOuro()}`);
                     (0, Auxiliares_1.lojaMostrarPocoes)();
                     option = Number(ask.question());
                     switch (option) {
@@ -153,6 +161,7 @@ function loja(personagem) {
                                 (0, Auxiliares_1.stop)();
                             }
                             else {
+                                (0, Auxiliares_1.clear)();
                                 (0, Cores_1.red)(`Sem dinheiro suficiente para comprar essa poção!`);
                                 (0, Auxiliares_1.stop)();
                             }
@@ -167,6 +176,7 @@ function loja(personagem) {
                                 (0, Auxiliares_1.stop)();
                             }
                             else {
+                                (0, Auxiliares_1.clear)();
                                 (0, Cores_1.red)(`Sem dinheiro suficiente para comprar essa poção!`);
                                 (0, Auxiliares_1.stop)();
                             }
@@ -181,6 +191,7 @@ function loja(personagem) {
                                 (0, Auxiliares_1.stop)();
                             }
                             else {
+                                (0, Auxiliares_1.clear)();
                                 (0, Cores_1.red)(`Sem dinheiro suficiente para comprar essa poção!`);
                                 (0, Auxiliares_1.stop)();
                             }
@@ -195,6 +206,7 @@ function loja(personagem) {
                                 (0, Auxiliares_1.stop)();
                             }
                             else {
+                                (0, Auxiliares_1.clear)();
                                 (0, Cores_1.red)(`Sem dinheiro suficiente para comprar essa poção!`);
                                 (0, Auxiliares_1.stop)();
                             }

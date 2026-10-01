@@ -50,38 +50,38 @@ function criaPersonagem() {
 ║     Arma: Espada Sagrada                                         ║
 ╚══════════════════════════════════════════════════════════════════╝
 `);
-        const opcao = Auxiliares_1.ask.questionInt('Escolha sua classe: ');
+        const opcao = Auxiliares_1.ask.question('Escolha sua classe: ');
         // Primeiro escolhe a classe
         switch (opcao) {
-            case 1:
+            case '1':
                 personagem = new Bardo_1.Bardo('');
                 break;
-            case 2:
+            case '2':
                 personagem = new Berserker_1.Berserker('');
                 break;
-            case 3:
+            case '3':
                 personagem = new Cacador_1.Cacador('');
                 break;
-            case 4:
+            case '4':
                 personagem = new Cavaleiro_1.Cavaleiro('');
                 break;
-            case 5:
+            case '5':
                 personagem = new Clerigo_1.Clerigo('');
                 break;
-            case 6:
+            case '6':
                 personagem = new Mago_1.Mago('');
                 break;
-            case 7:
+            case '7':
                 personagem = new Necromante_1.Necromante('');
                 break;
-            case 8:
+            case '8':
                 personagem = new Paladino_1.Paladino('');
                 break;
             default:
                 (0, Auxiliares_1.clear)();
                 (0, Cores_1.red)('Opção inválida!');
                 (0, Auxiliares_1.stop)();
-                continue; // Faz o while rdar novamente automaticamente
+                continue; // Faz o while rodar novamente automaticamente
         }
         // Mostra as informações da classe escolhida
         (0, Auxiliares_1.clear)();

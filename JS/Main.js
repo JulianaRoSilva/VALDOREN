@@ -2,8 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const Auxiliares_1 = require("./Auxiliares/Auxiliares");
 const Caminhos_1 = require("./Caminhos/Caminhos");
-const CriaPersonagem_1 = require("./Personagens/CriaPersonagem");
-let personagem = (0, CriaPersonagem_1.criaPersonagem)();
+const Necromante_1 = require("./Personagens/Necromante");
+let personagem = new Necromante_1.Necromante('Rainha das trevas');
 (0, Auxiliares_1.clear)();
 (0, Auxiliares_1.arteInfoJogo)();
 (0, Auxiliares_1.stop)();

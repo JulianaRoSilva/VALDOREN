@@ -186,7 +186,7 @@ const parte2 = (personagem) => {
             case 1:
                 //Chance de pegar o boss
                 const chance = Math.random();
-                if (!encontrouReiOssos && chance < 0.30) {
+                if (!encontrouReiOssos && chance < 0.10) {
                     encontrouReiOssos = true;
                     (0, exports.caminho1Pt2)(personagem, new ReiOssos_1.ReiOssos(), true);
                     break;
@@ -557,7 +557,7 @@ const parte4EscadaLateral = (personagem) => {
         '\nestá em andamento, e você chegou bem no meio dele.');
     (0, Auxiliares_1.stop)();
     while (true) {
-        (0, Cores_1.blue)('\n1- Confrontar os responsáveis diretamente' +
+        (0, Cores_1.blue)('\n1- Confrontar os responsáveis pelo ritual' +
             '\n2- Recuar e sabotar o ritual em silêncio' +
             '\n3- Sair do game');
         const escolhaParte4 = Number(Auxiliares_1.ask.question('Escolha: '));
@@ -678,10 +678,15 @@ const parte5 = (personagem) => {
     (0, Auxiliares_1.clear)();
     (0, exports.encontrarItens)(personagem);
     if (personagem.getTemMoeda()) {
-        (0, Cores_1.cyan)('\nEntre os destroços do ritual, você encontra documentos antigos' +
+        (0, Auxiliares_1.clear)();
+        (0, Cores_1.cyan)('\nOs encapuxados vão embora, sem saber que não voltariam uma outra vez.' +
+            '\nEntre os destroços do ritual, você encontra documentos antigos' +
             '\nescondidos atrás do pilar rachado. A moeda em seu bolso combina' +
-            '\nperfeitamente com um encaixe vazio nos papéis - ela não era apenas' +
-            '\num achado qualquer. Era parte do mecanismo do selo o tempo todo.');
+            '\nperfeitamente com um carimbo vazio nos papéis - ela não era apenas' +
+            '\num achado qualquer. Era parte do mecanismo do selo o tempo todo.' +
+            '\nEles revelam a verdadeira natureza do selo:' +
+            '\nos antigos reis de Valdoren não simplesmente trancaram' +
+            '\num monstro, mas um poder capaz de reescrever quem governa o reino.');
     }
     else {
         (0, Cores_1.cyan)('\nEntre os destroços do ritual, você encontra documentos antigos' +
@@ -691,11 +696,12 @@ const parte5 = (personagem) => {
     }
     (0, Auxiliares_1.stop)();
     (0, Auxiliares_1.clear)();
-    (0, Cores_1.white)('\nAgora você precisa decidir o que fazer com essa verdade - e com o' +
-        '\nque resta do selo.');
+    (0, Cores_1.white)('\nAgora você precisa decidir o que fazer com essa verdade.' +
+        '\nÉ realizado ritual noite por noite para manter a cidade refem da maldição de Valdoren e' +
+        '\nfazer com que o monstro continue selado nas ruinas subterraneas de Valdoren.');
     while (true) {
-        (0, Cores_1.blue)('\n1- Selar novamente as catacumbas para sempre' +
-            '\n2- Deixar o selo se romper' +
+        (0, Cores_1.blue)('\n1- Selar as catacumbas pra sempre e manter a maldição' +
+            '\n2- Deixar o selo se romper e acabar com a maldição' +
             '\n3- Sair do game');
         const escolhaParte5 = Number(Auxiliares_1.ask.question('Escolha: '));
         let opcaoValida = escolhaParte5 === 1 || escolhaParte5 === 2 || escolhaParte5 === 3;
@@ -786,8 +792,8 @@ const parte6 = (personagem, inimigo, romperSelo, jaEncontrouReiOssos) => {
             '\nutilizáveis ali. Talvez valha a pena gastar o que resta do seu ouro' +
             '\nantes do que vem pela frente.');
         (0, Auxiliares_1.stop)();
+        (0, Loja_1.loja)(personagem);
     }
-    (0, Loja_1.loja)(personagem);
     if (!romperSelo) {
         (0, Auxiliares_1.clear)();
         (0, Cores_1.cyan)('\nVocê retoma o caminho até a câmara final. Lá, o Dragão, guardião da entrada do selo,' +
@@ -891,7 +897,7 @@ const parte6 = (personagem, inimigo, romperSelo, jaEncontrouReiOssos) => {
     (0, Auxiliares_1.stop)();
     (0, Auxiliares_1.clear)();
     if (romperSelo) {
-        if (personagem.getReputacao() >= 10) {
+        if (personagem.getReputacao() >= 20) {
             (0, Cores_1.white)('\n=== FINAL: O Despertar Aceito ===');
             (0, Cores_1.cyan)('\nO selo permanece rompido, liberando uma energia antiga que ninguém em Ravenfall' +
                 '\nserá capaz de ignorar. O Rei dos Ossos foi derrotado, mas sua libertação' +

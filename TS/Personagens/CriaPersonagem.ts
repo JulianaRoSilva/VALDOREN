@@ -56,40 +56,40 @@ export function criaPersonagem(): Personagem {
 ╚══════════════════════════════════════════════════════════════════╝
 `);
 
-        const opcao = ask.questionInt('Escolha sua classe: ');
+        const opcao = ask.question('Escolha sua classe: ');
 
         // Primeiro escolhe a classe
         switch (opcao) {
 
-            case 1:
+            case '1':
                 personagem = new Bardo('');
                 break;
 
-            case 2:
+            case '2':
                 personagem = new Berserker('');
                 break;
 
-            case 3:
+            case '3':
                 personagem = new Cacador('');
                 break;
 
-            case 4:
+            case '4':
                 personagem = new Cavaleiro('');
                 break;
 
-            case 5:
+            case '5':
                 personagem = new Clerigo('');
                 break;
 
-            case 6:
+            case '6':
                 personagem = new Mago('');
                 break;
 
-            case 7:
+            case '7':
                 personagem = new Necromante('');
                 break;
 
-            case 8:
+            case '8':
                 personagem = new Paladino('');
                 break;
 
@@ -97,7 +97,7 @@ export function criaPersonagem(): Personagem {
                 clear();
                 red('Opção inválida!');
                 stop();
-                continue; // Faz o while rdar novamente automaticamente
+                continue; // Faz o while rodar novamente automaticamente
         }
 
         // Mostra as informações da classe escolhida

@@ -244,7 +244,7 @@ export function arteInfoJogo(): void {
 
     yellow(`
 ╔══════════════════════════════════════════════════════════╗
-║                    COMO FUNCIONA O JOGO                  ║
+║                  COMO FUNCIONA O JOGO                    ║
 ╠══════════════════════════════════════════════════════════╣
 ║                                                          ║
 ║  VALDOREN é uma aventura baseada em escolhas.            ║

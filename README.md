@@ -120,6 +120,7 @@ Os inimigos são:
 * `FadaCorrompida.ts`
 * `Fantasma.ts`
 * `Saqueador.ts`
+* `ReiOssos.ts`
 
 Cada inimigo possui características e comportamentos próprios, como:
 
