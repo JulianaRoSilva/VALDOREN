@@ -14,7 +14,7 @@ import { Personagem } from "./Personagem";
 
 export function criaPersonagem(): Personagem {
 
-    let nome: string = '';
+    let nome: string;
     let personagem: Personagem;
 
     clear();
@@ -56,40 +56,40 @@ export function criaPersonagem(): Personagem {
 ╚══════════════════════════════════════════════════════════════════╝
 `);
 
-        const opcao = ask.question('Escolha sua classe: ');
+        const opcao = Number(ask.question('Escolha sua classe: '));
 
         // Primeiro escolhe a classe
         switch (opcao) {
 
-            case '1':
+            case 1:
                 personagem = new Bardo('');
                 break;
 
-            case '2':
+            case 2:
                 personagem = new Berserker('');
                 break;
 
-            case '3':
+            case 3:
                 personagem = new Cacador('');
                 break;
 
-            case '4':
+            case 4:
                 personagem = new Cavaleiro('');
                 break;
 
-            case '5':
+            case 5:
                 personagem = new Clerigo('');
                 break;
 
-            case '6':
+            case 6:
                 personagem = new Mago('');
                 break;
 
-            case '7':
+            case 7:
                 personagem = new Necromante('');
                 break;
 
-            case '8':
+            case 8:
                 personagem = new Paladino('');
                 break;
 
@@ -143,7 +143,7 @@ Deseja confirmar?
 2 - DIGITAR NOVAMENTE
 `);
 
-            const confirmarNome = Number(ask.question().toUpperCase());
+            const confirmarNome = Number(ask.question());
 
             if (confirmarNome === 1) {
                 break; // para de executar autoamticamente o while
@@ -193,7 +193,7 @@ Deseja confirmar?
         }
 
         clear();
-        green(`PERSONAGEM FINAL PARA O JOGO: `)
+        green(`PERSONAGEM FINAL PARA O JOGO: `);
         personagem.fichaPersonagem();
         stop();
 

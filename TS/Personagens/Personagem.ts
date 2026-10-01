@@ -291,7 +291,7 @@ Opcoes:
     ║          FICHA DO JOGADOR         ║
     ╠═══════════════════════════════════╣
     ║                                   ║
-    ║  NOME   : ${this.nome.padEnd(23)} ║
+    ║  NOME   : ${this.nome} 
     ║  CLASSE : ${this.classe.padEnd(23)} 
     ║                                   ║
     ╠═══════════════════════════════════╣
@@ -310,7 +310,7 @@ Opcoes:
     ║          FICHA DO JOGADOR         ║
     ╠═══════════════════════════════════╣
     ║                                   ║
-    ║  NOME   : ${this.nome.padEnd(23)} 
+    ║  NOME   : ${this.nome}
     ║  CLASSE : ${this.classe.padEnd(23)} 
     ║                                   ║
     ╠═══════════════════════════════════╣

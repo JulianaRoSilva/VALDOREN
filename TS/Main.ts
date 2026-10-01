@@ -3,7 +3,7 @@ import { inicio } from "./Caminhos/Caminhos";
 
 import { criaPersonagem } from "./Personagens/CriaPersonagem";
 
-let personagem = criaPersonagem()
+let personagem = criaPersonagem();
 
 clear();
 arteInfoJogo();

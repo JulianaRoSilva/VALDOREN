@@ -1,4 +1,11 @@
 "use strict";
+/**
+ * Arquivo utilizado para evitar repetição de código dentro da Main
+ * - Artes do terminal
+ * - Limpeza de terminal
+ * - Stopar o terminal
+ * - Menus
+ */
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.tituloJogo = exports.consoleSaindo = exports.logger = exports.ask = void 0;
 exports.stop = stop;

@@ -13,7 +13,7 @@ const Mago_1 = require("./Mago");
 const Necromante_1 = require("./Necromante");
 const Paladino_1 = require("./Paladino");
 function criaPersonagem() {
-    let nome = '';
+    let nome;
     let personagem;
     (0, Auxiliares_1.clear)();
     (0, Auxiliares_1.arteCriaPersonagem)();
@@ -50,31 +50,31 @@ function criaPersonagem() {
 ║     Arma: Espada Sagrada                                         ║
 ╚══════════════════════════════════════════════════════════════════╝
 `);
-        const opcao = Auxiliares_1.ask.question('Escolha sua classe: ');
+        const opcao = Number(Auxiliares_1.ask.question('Escolha sua classe: '));
         // Primeiro escolhe a classe
         switch (opcao) {
-            case '1':
+            case 1:
                 personagem = new Bardo_1.Bardo('');
                 break;
-            case '2':
+            case 2:
                 personagem = new Berserker_1.Berserker('');
                 break;
-            case '3':
+            case 3:
                 personagem = new Cacador_1.Cacador('');
                 break;
-            case '4':
+            case 4:
                 personagem = new Cavaleiro_1.Cavaleiro('');
                 break;
-            case '5':
+            case 5:
                 personagem = new Clerigo_1.Clerigo('');
                 break;
-            case '6':
+            case 6:
                 personagem = new Mago_1.Mago('');
                 break;
-            case '7':
+            case 7:
                 personagem = new Necromante_1.Necromante('');
                 break;
-            case '8':
+            case 8:
                 personagem = new Paladino_1.Paladino('');
                 break;
             default:
@@ -117,7 +117,7 @@ Deseja confirmar?
 1 - SIM
 2 - DIGITAR NOVAMENTE
 `);
-            const confirmarNome = Number(Auxiliares_1.ask.question().toUpperCase());
+            const confirmarNome = Number(Auxiliares_1.ask.question());
             if (confirmarNome === 1) {
                 break; // para de executar autoamticamente o while
             }

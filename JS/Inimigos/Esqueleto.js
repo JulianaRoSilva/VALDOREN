@@ -66,7 +66,7 @@ Seu método de ataque é roubo de vida. A cada dano causado, sua vida aumenta no
     ║                                        ║
     ╚════════════════════════════════════════╝
     `);
-        const vidaRoubada = personagem.tomarDano(rouboAleatorio); // método de tomar dano retorna o dano efetivo
+        personagem.tomarDano(rouboAleatorio); // método de tomar dano retorna o dano efetivo
         (0, Auxiliares_1.stop)();
     }
     //Mostrar dados do inimigo
