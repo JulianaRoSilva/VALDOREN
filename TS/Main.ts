@@ -4,12 +4,10 @@ import { inicio } from "./Caminhos/Caminhos";
 import { criaPersonagem } from "./Personagens/CriaPersonagem";
 import { Necromante } from "./Personagens/Necromante";
 
-let personagem = new Necromante('Rainha das trevas');
+let personagem = criaPersonagem()
 
 clear();
 arteInfoJogo();
 stop();
 
 inicio(personagem);
-
-// iniciarConfronto(new Bardo('Ju'), new ReiOssos())

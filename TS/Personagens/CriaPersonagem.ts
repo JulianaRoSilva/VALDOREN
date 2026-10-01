@@ -150,6 +150,7 @@ Deseja confirmar?
             }
 
             if (confirmarNome !== 2) {
+                clear();
                 red('Opção inválida!');
                 stop();
             }

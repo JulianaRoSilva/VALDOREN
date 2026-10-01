@@ -21,18 +21,18 @@ let encontrouReiOssos: boolean = false;
 
 //INICIO GAME
 export const inicio = (personagem: Personagem): void => {
-    clear();
-    cyan(
-        '\nA Chegada a Ravenfall.\n' +
-
-        '\nVocê chega a Ravenfall ao anoitecer, com a poeira da estrada ainda nas botas.' +
-        '\nNo caminho até a entrada da cidade, seu pé esbarra em algo enterrado na terra' +
-        '\nsolta à beira da estrada. Você se abaixa e encontra uma moeda antiga, desgastada,' +
-        '\ncom um símbolo estranho gravado em uma das faces — parecido com os relatos' +
-        '\nque você ouviu sobre as Catacumbas de Valdoren.\n' +
-        '\nEla parece não ter valor nenhum como dinheiro. Talvez seja só uma velha moeda');
-
+    
     while (true) {
+        clear();
+        cyan(
+            '\nA Chegada a Ravenfall.\n' +
+    
+            '\nVocê chega a Ravenfall ao anoitecer, com a poeira da estrada ainda nas botas.' +
+            '\nNo caminho até a entrada da cidade, seu pé esbarra em algo enterrado na terra' +
+            '\nsolta à beira da estrada. Você se abaixa e encontra uma moeda antiga, desgastada,' +
+            '\ncom um símbolo estranho gravado em uma das faces — parecido com os relatos' +
+            '\nque você ouviu sobre as Catacumbas de Valdoren.\n' +
+            '\nEla parece não ter valor nenhum como dinheiro. Talvez seja só uma velha moeda');
         blue(
 
             '\n1- Pegar a moeda e guardá-la' +
@@ -45,7 +45,10 @@ export const inicio = (personagem: Personagem): void => {
         let opcaoValida: boolean = escolhaMoeda === 1 || escolhaMoeda === 2 || escolhaMoeda === 3;
 
         if (!opcaoValida) {
+
+            clear()
             red('Opção inválida!');
+            stop()
             continue;
         }
 
@@ -84,20 +87,21 @@ export const inicio = (personagem: Personagem): void => {
 // Início PARTE 1
 export const parte1 = (personagem: Personagem): void => {
     clear();
-    cyan(
-        '\nAs ruas de Ravenfall estão quase vazias – portas trancadas cedo, olhares' +
-        '\ndesconfiados nas janelas. No centro da praça, um sino distante ainda ecoa' +
-        '\nem sua memória, embora tenha parado de tocar há três dias.' +
-
-        '\n\nVocê vê um mapa rasgado e esfarrapado voando em meio às casas na cidade e vai até ele e o pega.' +
-        '\nNeste mapa, há um nome escrito na borda' +
-
-        '\n\n"Se estiver em perigo, me procure. Ass. Mestre Averic"' +
-
-        '\n\nAlém disso, há um caminho traçado em vermelho no mapa que vai até a "Taverna do Corvo Cinza"' +
-        '\nVocê precisa decidir por onde começar.');
-
+    
     while (true) {
+        clear()
+        cyan(
+            '\nAs ruas de Ravenfall estão quase vazias – portas trancadas cedo, olhares' +
+            '\ndesconfiados nas janelas. No centro da praça, um sino distante ainda ecoa' +
+            '\nem sua memória, embora tenha parado de tocar há três dias.' +
+    
+            '\n\nVocê vê um mapa rasgado e esfarrapado voando em meio às casas na cidade e vai até ele e o pega.' +
+            '\nNeste mapa, há um nome escrito na borda' +
+    
+            '\n\n"Se estiver em perigo, me procure. Ass. Mestre Averic"' +
+    
+            '\n\nAlém disso, há um caminho traçado em vermelho no mapa que vai até a "Taverna do Corvo Cinza"' +
+            '\nVocê precisa decidir por onde começar.');
         blue(
 
             '\n1- Ir a caminho da Taverna do Corvo Cinza' +
@@ -110,7 +114,9 @@ export const parte1 = (personagem: Personagem): void => {
         let opcaoValida: boolean = escolhaParte1 === 1 || escolhaParte1 === 2 || escolhaParte1 === 3;
 
         if (!opcaoValida) {
+            clear();
             red('Opção inválida!');
+            stop();
             continue;
         }
 
@@ -226,11 +232,11 @@ export const caminho2Pt1 = (personagem: Personagem): void => {
 // Início PARTE 2
 export const parte2 = (personagem: Personagem): void => {
     clear();
-    cyan(
-        '\nDe um jeito ou de outro, fica claro: as respostas estão embaixo da terra,' +
-        '\nnas Catacumbas de Valdoren.');
-
+    
     while (true) {
+        cyan(
+            '\nDe um jeito ou de outro, fica claro: as respostas estão embaixo da terra,' +
+            '\nnas Catacumbas de Valdoren.');
         blue(
 
             '\n1- Aceitar ajuda de um guia local (Tom)' +
@@ -243,7 +249,9 @@ export const parte2 = (personagem: Personagem): void => {
         let opcaoValida: boolean = escolhaParte2 === 1 || escolhaParte2 === 2 || escolhaParte2 === 3;
 
         if (!opcaoValida) {
+            clear()
             red('Opção inválida!');
+            stop()
             continue;
         }
 
@@ -277,12 +285,12 @@ export const parte2 = (personagem: Personagem): void => {
 ////Caso personagem escolha ACEITA AJUDA DE UM GUIA LOCAL
 export const caminho1Pt2 = (personagem: Personagem, inimigo: Inimigo, eReiOssos: boolean): void => {
     clear();
-    cyan(
-        '\nTom se aproxima, oferecendo seus serviços como guia.' +
-        '\nEle conhece entradas esquecidas nas catacumbas, mas quer saber como' +
-        '\nserá pago.');
-
+    
     while (true) {
+        cyan(
+            '\nTom se aproxima, oferecendo seus serviços como guia.' +
+            '\nEle conhece entradas esquecidas nas catacumbas, mas quer saber como' +
+            '\nserá pago.');
         blue(
 
             '\n1- Pagar Tom adiantado (10 de ouro)' +
@@ -295,7 +303,9 @@ export const caminho1Pt2 = (personagem: Personagem, inimigo: Inimigo, eReiOssos:
         let opcaoValida: boolean = escolhaTom === 1 || escolhaTom === 2 || escolhaTom === 3;
 
         if (!opcaoValida) {
+            clear()
             red('Opção inválida!');
+            stop()
             continue;
         }
 
@@ -586,14 +596,14 @@ export const parte4CorredorPrincipal = (personagem: Personagem, inimigo: Inimigo
 
     if (personagem.getReputacao() >= 10) {
         clear();
-        cyan(
-            '\nUm dos encapuzados se vira e hesita ao reconhecer você. Rumores' +
-            '\nsobre um forasteiro confiável já correram por Ravenfall - ele parece' +
-            '\ninseguro sobre atacar ou não.');
-        white('\n(Sua reputação alta abriu uma chance de negociar.)');
-        stop();
-
+        
         while (true) {
+            cyan(
+                '\nUm dos encapuzados se vira e hesita ao reconhecer você. Rumores' +
+                '\nsobre um forasteiro confiável já correram por Ravenfall - ele parece' +
+                '\ninseguro sobre atacar ou não.');
+            white('\n(Sua reputação alta abriu uma chance de negociar.)');
+            stop();
             blue(
                 '\n1- Tentar negociar com o encapuzado' +
                 '\n2- Atacar antes que ele reaja' +
@@ -605,7 +615,9 @@ export const parte4CorredorPrincipal = (personagem: Personagem, inimigo: Inimigo
             let opcaoValida: boolean = escolhaNegociacao === 1 || escolhaNegociacao === 2 || escolhaNegociacao === 3;
 
             if (!opcaoValida) {
+                clear()
                 red('Opção inválida!');
+                stop()
                 continue;
             }
 

@@ -122,6 +122,7 @@ Deseja confirmar?
                 break; // para de executar autoamticamente o while
             }
             if (confirmarNome !== 2) {
+                (0, Auxiliares_1.clear)();
                 (0, Cores_1.red)('Opção inválida!');
                 (0, Auxiliares_1.stop)();
             }

@@ -19,22 +19,24 @@ CAMINHO2PARTE5 coloquei confronto com o BOSS
 let encontrouReiOssos = false;
 //INICIO GAME
 const inicio = (personagem) => {
-    (0, Auxiliares_1.clear)();
-    (0, Cores_1.cyan)('\nA Chegada a Ravenfall.\n' +
-        '\nVocê chega a Ravenfall ao anoitecer, com a poeira da estrada ainda nas botas.' +
-        '\nNo caminho até a entrada da cidade, seu pé esbarra em algo enterrado na terra' +
-        '\nsolta à beira da estrada. Você se abaixa e encontra uma moeda antiga, desgastada,' +
-        '\ncom um símbolo estranho gravado em uma das faces — parecido com os relatos' +
-        '\nque você ouviu sobre as Catacumbas de Valdoren.\n' +
-        '\nEla parece não ter valor nenhum como dinheiro. Talvez seja só uma velha moeda');
     while (true) {
+        (0, Auxiliares_1.clear)();
+        (0, Cores_1.cyan)('\nA Chegada a Ravenfall.\n' +
+            '\nVocê chega a Ravenfall ao anoitecer, com a poeira da estrada ainda nas botas.' +
+            '\nNo caminho até a entrada da cidade, seu pé esbarra em algo enterrado na terra' +
+            '\nsolta à beira da estrada. Você se abaixa e encontra uma moeda antiga, desgastada,' +
+            '\ncom um símbolo estranho gravado em uma das faces — parecido com os relatos' +
+            '\nque você ouviu sobre as Catacumbas de Valdoren.\n' +
+            '\nEla parece não ter valor nenhum como dinheiro. Talvez seja só uma velha moeda');
         (0, Cores_1.blue)('\n1- Pegar a moeda e guardá-la' +
             '\n2- Ignorar e seguir viagem' +
             '\n3- Sair do game');
         const escolhaMoeda = Number(Auxiliares_1.ask.question('Escolha: '));
         let opcaoValida = escolhaMoeda === 1 || escolhaMoeda === 2 || escolhaMoeda === 3;
         if (!opcaoValida) {
+            (0, Auxiliares_1.clear)();
             (0, Cores_1.red)('Opção inválida!');
+            (0, Auxiliares_1.stop)();
             continue;
         }
         switch (escolhaMoeda) {
@@ -66,22 +68,25 @@ exports.inicio = inicio;
 // Início PARTE 1
 const parte1 = (personagem) => {
     (0, Auxiliares_1.clear)();
-    (0, Cores_1.cyan)('\nAs ruas de Ravenfall estão quase vazias – portas trancadas cedo, olhares' +
-        '\ndesconfiados nas janelas. No centro da praça, um sino distante ainda ecoa' +
-        '\nem sua memória, embora tenha parado de tocar há três dias.' +
-        '\n\nVocê vê um mapa rasgado e esfarrapado voando em meio às casas na cidade e vai até ele e o pega.' +
-        '\nNeste mapa, há um nome escrito na borda' +
-        '\n\n"Se estiver em perigo, me procure. Ass. Mestre Averic"' +
-        '\n\nAlém disso, há um caminho traçado em vermelho no mapa que vai até a "Taverna do Corvo Cinza"' +
-        '\nVocê precisa decidir por onde começar.');
     while (true) {
+        (0, Auxiliares_1.clear)();
+        (0, Cores_1.cyan)('\nAs ruas de Ravenfall estão quase vazias – portas trancadas cedo, olhares' +
+            '\ndesconfiados nas janelas. No centro da praça, um sino distante ainda ecoa' +
+            '\nem sua memória, embora tenha parado de tocar há três dias.' +
+            '\n\nVocê vê um mapa rasgado e esfarrapado voando em meio às casas na cidade e vai até ele e o pega.' +
+            '\nNeste mapa, há um nome escrito na borda' +
+            '\n\n"Se estiver em perigo, me procure. Ass. Mestre Averic"' +
+            '\n\nAlém disso, há um caminho traçado em vermelho no mapa que vai até a "Taverna do Corvo Cinza"' +
+            '\nVocê precisa decidir por onde começar.');
         (0, Cores_1.blue)('\n1- Ir a caminho da Taverna do Corvo Cinza' +
             '\n2- Procurar o tal Mestre Averic' +
             '\n3- Sair do game');
         const escolhaParte1 = Number(Auxiliares_1.ask.question('Escolha: '));
         let opcaoValida = escolhaParte1 === 1 || escolhaParte1 === 2 || escolhaParte1 === 3;
         if (!opcaoValida) {
+            (0, Auxiliares_1.clear)();
             (0, Cores_1.red)('Opção inválida!');
+            (0, Auxiliares_1.stop)();
             continue;
         }
         switch (escolhaParte1) {
@@ -170,16 +175,18 @@ exports.caminho2Pt1 = caminho2Pt1;
 // Início PARTE 2
 const parte2 = (personagem) => {
     (0, Auxiliares_1.clear)();
-    (0, Cores_1.cyan)('\nDe um jeito ou de outro, fica claro: as respostas estão embaixo da terra,' +
-        '\nnas Catacumbas de Valdoren.');
     while (true) {
+        (0, Cores_1.cyan)('\nDe um jeito ou de outro, fica claro: as respostas estão embaixo da terra,' +
+            '\nnas Catacumbas de Valdoren.');
         (0, Cores_1.blue)('\n1- Aceitar ajuda de um guia local (Tom)' +
             '\n2- Ir sozinho' +
             '\n3- Sair do game');
         const escolhaParte2 = Number(Auxiliares_1.ask.question('Escolha: '));
         let opcaoValida = escolhaParte2 === 1 || escolhaParte2 === 2 || escolhaParte2 === 3;
         if (!opcaoValida) {
+            (0, Auxiliares_1.clear)();
             (0, Cores_1.red)('Opção inválida!');
+            (0, Auxiliares_1.stop)();
             continue;
         }
         switch (escolhaParte2) {
@@ -209,17 +216,19 @@ exports.parte2 = parte2;
 ////Caso personagem escolha ACEITA AJUDA DE UM GUIA LOCAL
 const caminho1Pt2 = (personagem, inimigo, eReiOssos) => {
     (0, Auxiliares_1.clear)();
-    (0, Cores_1.cyan)('\nTom se aproxima, oferecendo seus serviços como guia.' +
-        '\nEle conhece entradas esquecidas nas catacumbas, mas quer saber como' +
-        '\nserá pago.');
     while (true) {
+        (0, Cores_1.cyan)('\nTom se aproxima, oferecendo seus serviços como guia.' +
+            '\nEle conhece entradas esquecidas nas catacumbas, mas quer saber como' +
+            '\nserá pago.');
         (0, Cores_1.blue)('\n1- Pagar Tom adiantado (10 de ouro)' +
             '\n2- Prometer pagamento depois' +
             '\n3- Sair do game');
         const escolhaTom = Number(Auxiliares_1.ask.question('Escolha: '));
         let opcaoValida = escolhaTom === 1 || escolhaTom === 2 || escolhaTom === 3;
         if (!opcaoValida) {
+            (0, Auxiliares_1.clear)();
             (0, Cores_1.red)('Opção inválida!');
+            (0, Auxiliares_1.stop)();
             continue;
         }
         switch (escolhaTom) {
@@ -449,19 +458,21 @@ const parte4CorredorPrincipal = (personagem, inimigo) => {
     (0, Auxiliares_1.stop)();
     if (personagem.getReputacao() >= 10) {
         (0, Auxiliares_1.clear)();
-        (0, Cores_1.cyan)('\nUm dos encapuzados se vira e hesita ao reconhecer você. Rumores' +
-            '\nsobre um forasteiro confiável já correram por Ravenfall - ele parece' +
-            '\ninseguro sobre atacar ou não.');
-        (0, Cores_1.white)('\n(Sua reputação alta abriu uma chance de negociar.)');
-        (0, Auxiliares_1.stop)();
         while (true) {
+            (0, Cores_1.cyan)('\nUm dos encapuzados se vira e hesita ao reconhecer você. Rumores' +
+                '\nsobre um forasteiro confiável já correram por Ravenfall - ele parece' +
+                '\ninseguro sobre atacar ou não.');
+            (0, Cores_1.white)('\n(Sua reputação alta abriu uma chance de negociar.)');
+            (0, Auxiliares_1.stop)();
             (0, Cores_1.blue)('\n1- Tentar negociar com o encapuzado' +
                 '\n2- Atacar antes que ele reaja' +
                 '\n3- Sair do game');
             const escolhaNegociacao = Number(Auxiliares_1.ask.question('Escolha: '));
             let opcaoValida = escolhaNegociacao === 1 || escolhaNegociacao === 2 || escolhaNegociacao === 3;
             if (!opcaoValida) {
+                (0, Auxiliares_1.clear)();
                 (0, Cores_1.red)('Opção inválida!');
+                (0, Auxiliares_1.stop)();
                 continue;
             }
             switch (escolhaNegociacao) {
