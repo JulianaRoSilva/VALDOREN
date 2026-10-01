@@ -8,6 +8,7 @@
 
 ## Como executar o projeto
 - Executar o arquivo main.js no terminal através do comando `node main.js`
+- É recomendado que o terminal fique em tela cheia no VsCode para uma melhor experiencia!
 
 ---
 

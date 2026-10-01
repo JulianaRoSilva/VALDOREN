@@ -42,7 +42,7 @@ export function iniciarConfronto(personagem: Personagem, inimigo: Inimigo) {
                             if (!inimigo.getRessurgir()) {
                                 clear();
                                 inimigo.atacar(personagem);
-                                break; //parar while codigo caso o rei ossos atacar 1x já
+                                break; //parar while caso o rei ossos atacar 1x já
                             }
 
                         }
