@@ -90,6 +90,10 @@ export abstract class Personagem {
         this.ouro += val;
     }
 
+    public setNome(nome: string){
+        this.nome = nome;
+    }
+
     public getItens(): Item[] {
         return this.inventario
     }

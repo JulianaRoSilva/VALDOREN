@@ -70,6 +70,9 @@ class Personagem {
     setOuro(val) {
         this.ouro += val;
     }
+    setNome(nome) {
+        this.nome = nome;
+    }
     getItens() {
         return this.inventario;
     }

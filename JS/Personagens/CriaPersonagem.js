@@ -127,33 +127,7 @@ Deseja confirmar?
                 (0, Auxiliares_1.stop)();
             }
         }
-        // Agora cria o personagem definitivamente com o nome
-        switch (opcao) {
-            case 1:
-                personagem = new Bardo_1.Bardo(nome);
-                break;
-            case 2:
-                personagem = new Berserker_1.Berserker(nome);
-                break;
-            case 3:
-                personagem = new Cacador_1.Cacador(nome);
-                break;
-            case 4:
-                personagem = new Cavaleiro_1.Cavaleiro(nome);
-                break;
-            case 5:
-                personagem = new Clerigo_1.Clerigo(nome);
-                break;
-            case 6:
-                personagem = new Mago_1.Mago(nome);
-                break;
-            case 7:
-                personagem = new Necromante_1.Necromante(nome);
-                break;
-            case 8:
-                personagem = new Paladino_1.Paladino(nome);
-                break;
-        }
+        personagem.setNome(nome);
         (0, Auxiliares_1.clear)();
         (0, Cores_1.green)(`PERSONAGEM FINAL PARA O JOGO: `);
         personagem.fichaPersonagem();
