@@ -1,3 +1,11 @@
+/**
+ * Arquivo utilizado para evitar repetição de código dentro da Main
+ * - Artes do terminal
+ * - Limpeza de terminal
+ * - Stopar o terminal 
+ * - Menus
+ */
+
 import { Inimigo } from "../Interfaces/Inimigo";
 import { Personagem } from "../Personagens/Personagem";
 import { blue, green, orange, purple, red, white, yellow } from "./Cores";
@@ -293,7 +301,7 @@ export function arteInfoJogo(): void {
 }
 
 export function infoCoresConfronto(): void {
-    yellow(`RODADA DE ATAQUE NO TERMINAL:`)
-    blue(`AZUL: PERSONAGEM`)
-    red(`VERMELHO: INIMIGO`)
+    yellow(`RODADA DE ATAQUE NO TERMINAL:`);
+    blue(`AZUL: PERSONAGEM`);
+    red(`VERMELHO: INIMIGO`);
 }
